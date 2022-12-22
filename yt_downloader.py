@@ -2,7 +2,7 @@ from pytube import YouTube
 
 def download(link):
     youtubeObject = YouTube(link)
-    youtubeObject = youtubeObject.streams.get_audio_only()
+    youtubeObject = youtubeObject.streams.get_highest_quality()
     try:
         youtubeObject.download()
     except:
