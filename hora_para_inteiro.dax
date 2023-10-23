@@ -1,0 +1,11 @@
+﻿Formatar Hora para Inteiro = 
+VAR SomaHora = SUM(fIndicadores[I3 - Meta])
+VAR vHora = HOUR(SomaHora)
+VAR vMinutos = MINUTE(SomaHora)
+VAR vSegundos = SECOND(SomaHora)
+
+VAR SegundosAjustados =
+    IF(vSegundos < 10, vMinutos * 100 + vSegundos, vMinutos * 100 + vSegundos)
+
+RETURN 
+CONVERT(vHora * 10000 + SegundosAjustados, INTEGER)
