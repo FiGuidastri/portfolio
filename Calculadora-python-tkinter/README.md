@@ -1,0 +1,1 @@
+Uma calculador python utilizando a biblioteca Tkinter
